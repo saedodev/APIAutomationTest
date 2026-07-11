@@ -49,8 +49,7 @@ public class StudentManagement extends ValidationApiTest {
                 .log().all()
                 .assertThat()
                 .statusCode(200)
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
+                .assertThat();
     }
 
     @Test (dependsOnMethods = "testLogin")

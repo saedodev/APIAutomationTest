@@ -1,0 +1,3 @@
+# Ignore an entire folder (always end with a slash)
+build/
+dist/
