@@ -1,3 +1,5 @@
 # Ignore an entire folder (always end with a slash)
+.gradle/
+.idea/
 build/
 dist/

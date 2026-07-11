@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">14.068s</div>
+<div class="counter">21.288s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,42 +79,42 @@
 </thead>
 <tr>
 <td class="success">createStudent</td>
-<td class="success">2.062s</td>
+<td class="success">3.172s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getAllStudent</td>
-<td class="success">1.993s</td>
+<td class="success">2.213s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getByIdStudent</td>
-<td class="success">0.746s</td>
+<td class="success">0.738s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDestroyStudent</td>
-<td class="success">0.981s</td>
+<td class="success">1.435s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testLogin</td>
-<td class="success">0.848s</td>
+<td class="success">1.341s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPatchStudent</td>
-<td class="success">1.003s</td>
+<td class="success">0.984s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testRegister</td>
-<td class="success">3.472s</td>
+<td class="success">7.425s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testUpdateStudent</td>
-<td class="success">2.963s</td>
+<td class="success">3.980s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -122,66 +122,13 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>HTTP/1.1 201 Created
-Cache-Control: public, max-age=0, must-revalidate
-Content-Type: application/json
-Date: Sat, 11 Jul 2026 17:16:26 GMT
-Permissions-Policy: geolocation=(), microphone=(), camera=()
-Referrer-Policy: strict-origin-when-cross-origin
-Server: Vercel
-Strict-Transport-Security: max-age=63072000
-Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Matched-Path: /api/auth/register
-X-Ratelimit-Limit: 100
-X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T17:17:25.822Z
-X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::9c6zz-1783790185802-041b7d94db0d
-X-Xss-Protection: 1; mode=block
-Transfer-Encoding: chunked
-
-{
-    &quot;success&quot;: true,
-    &quot;message&quot;: &quot;Registrasi berhasil&quot;,
-    &quot;data&quot;: {
-        &quot;id&quot;: &quot;f4621c14-f714-4386-8960-d7a772ca58d6&quot;,
-        &quot;email&quot;: &quot;bayuyudha1783790182496@gmail.com&quot;,
-        &quot;nama&quot;: &quot;Bayu Yudha Pratama&quot;,
-        &quot;created_at&quot;: &quot;2026-07-11T17:16:26.511519+00:00&quot;,
-        &quot;updated_at&quot;: &quot;2026-07-11T17:16:26.511519+00:00&quot;
-    }
-}
-HTTP/1.1 401 Unauthorized
-Cache-Control: public, max-age=0, must-revalidate
-Content-Type: application/json
-Date: Sat, 11 Jul 2026 17:16:26 GMT
-Permissions-Policy: geolocation=(), microphone=(), camera=()
-Referrer-Policy: strict-origin-when-cross-origin
-Server: Vercel
-Strict-Transport-Security: max-age=63072000
-Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Matched-Path: /api/auth/login
-X-Ratelimit-Limit: 100
-X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T17:17:25.849Z
-X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::2l8fv-1783790185799-36e996a89aa7
-X-Xss-Protection: 1; mode=block
-Transfer-Encoding: chunked
-
-{
-    &quot;success&quot;: false,
-    &quot;error&quot;: &quot;Email atau password salah&quot;
-}
-Email anda bayuyudha1783790182496@gmail.com berhasil diregistrasi!
+<pre>Status Code: 200
+Response: {&quot;success&quot;:true,&quot;message&quot;:&quot;Login berhasil&quot;,&quot;data&quot;:{&quot;user&quot;:{&quot;id&quot;:&quot;cfc0caeb-a686-4119-9a1e-8337b3606367&quot;,&quot;email&quot;:&quot;bayuyudha1783791755000@gmail.com&quot;,&quot;nama&quot;:&quot;Bayu Yudha Pratama&quot;,&quot;created_at&quot;:&quot;2026-07-11T17:42:42.260317+00:00&quot;,&quot;updated_at&quot;:&quot;2026-07-11T17:42:42.260317+00:00&quot;},&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJjZmMwY2FlYi1hNjg2LTQxMTktOWExZS04MzM3YjM2MDYzNjciLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3OTE3NTUwMDBAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc5MTc2MywiZXhwIjoxNzg0Mzk2NTYzfQ.1NefTFIJcexC8v2vLjZFyOIe8RvxIUWvUkaPW_viLkM&quot;}}
+Token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJjZmMwY2FlYi1hNjg2LTQxMTktOWExZS04MzM3YjM2MDYzNjciLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3OTE3NTUwMDBAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc5MTc2MywiZXhwIjoxNzg0Mzk2NTYzfQ.1NefTFIJcexC8v2vLjZFyOIe8RvxIUWvUkaPW_viLkM
 HTTP/1.1 201 Created
 Cache-Control: public, max-age=0, must-revalidate
 Content-Type: application/json
-Date: Sat, 11 Jul 2026 17:16:28 GMT
+Date: Sat, 11 Jul 2026 17:42:44 GMT
 Permissions-Policy: geolocation=(), microphone=(), camera=()
 Referrer-Policy: strict-origin-when-cross-origin
 Server: Vercel
@@ -192,9 +139,9 @@ X-Frame-Options: DENY
 X-Matched-Path: /api/auth/register
 X-Ratelimit-Limit: 100
 X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T17:17:27.919Z
+X-Ratelimit-Reset: 2026-07-11T17:43:42.904Z
 X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::4zc4f-1783790187893-23c75d029c74
+X-Vercel-Id: sin1::iad1::sckbc-1783791762875-8b4bfa8914fe
 X-Xss-Protection: 1; mode=block
 Transfer-Encoding: chunked
 
@@ -202,48 +149,44 @@ Transfer-Encoding: chunked
     &quot;success&quot;: true,
     &quot;message&quot;: &quot;Registrasi berhasil&quot;,
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;6676c0b3-f468-4c93-89f4-4fca0bf7532a&quot;,
-        &quot;email&quot;: &quot;bayuyudha1783790182410@gmail.com&quot;,
+        &quot;id&quot;: &quot;f0b5489c-8fbd-449a-b386-21f61f793201&quot;,
+        &quot;email&quot;: &quot;bayuyudha1783791754880@gmail.com&quot;,
         &quot;nama&quot;: &quot;Bayu Yudha Pratama&quot;,
-        &quot;created_at&quot;: &quot;2026-07-11T17:16:28.624798+00:00&quot;,
-        &quot;updated_at&quot;: &quot;2026-07-11T17:16:28.624798+00:00&quot;
+        &quot;created_at&quot;: &quot;2026-07-11T17:42:44.577894+00:00&quot;,
+        &quot;updated_at&quot;: &quot;2026-07-11T17:42:44.577894+00:00&quot;
     }
 }
-Email anda bayuyudha1783790182410@gmail.com berhasil diregistrasi!
-Status Code: 200
-Response: {&quot;success&quot;:true,&quot;message&quot;:&quot;Login berhasil&quot;,&quot;data&quot;:{&quot;user&quot;:{&quot;id&quot;:&quot;6676c0b3-f468-4c93-89f4-4fca0bf7532a&quot;,&quot;email&quot;:&quot;bayuyudha1783790182410@gmail.com&quot;,&quot;nama&quot;:&quot;Bayu Yudha Pratama&quot;,&quot;created_at&quot;:&quot;2026-07-11T17:16:28.624798+00:00&quot;,&quot;updated_at&quot;:&quot;2026-07-11T17:16:28.624798+00:00&quot;},&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2Njc2YzBiMy1mNDY4LTRjOTMtODlmNC00ZmNhMGJmNzUzMmEiLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3OTAxODI0MTBAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc5MDE5MCwiZXhwIjoxNzg0Mzk0OTkwfQ.DpPFH5PR-Ka8dw0TqR5xpgLtCXw4EyrPbXa4ZYCPciU&quot;}}
-Token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2Njc2YzBiMy1mNDY4LTRjOTMtODlmNC00ZmNhMGJmNzUzMmEiLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3OTAxODI0MTBAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc5MDE5MCwiZXhwIjoxNzg0Mzk0OTkwfQ.DpPFH5PR-Ka8dw0TqR5xpgLtCXw4EyrPbXa4ZYCPciU
-HTTP/1.1 401 Unauthorized
-Cache-Control: public, max-age=0, must-revalidate
-Content-Type: application/json
-Date: Sat, 11 Jul 2026 17:16:31 GMT
-Permissions-Policy: geolocation=(), microphone=(), camera=()
-Referrer-Policy: strict-origin-when-cross-origin
-Server: Vercel
-Strict-Transport-Security: max-age=63072000
-Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Matched-Path: /api/auth/login
-X-Ratelimit-Limit: 100
-X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T17:17:31.443Z
-X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::s97qr-1783790191420-3397b623f089
-X-Xss-Protection: 1; mode=block
-Transfer-Encoding: chunked
-
-{
-    &quot;success&quot;: false,
-    &quot;error&quot;: &quot;Email atau password salah&quot;
-}
-Status Code: 401
-Response: {&quot;success&quot;:false,&quot;error&quot;:&quot;Email atau password salah&quot;}
+Email anda bayuyudha1783791754880@gmail.com berhasil diregistrasi!
 HTTP/1.1 200 OK
 Cache-Control: public, max-age=0, must-revalidate
 Content-Encoding: gzip
 Content-Type: application/json
-Date: Sat, 11 Jul 2026 17:16:35 GMT
+Date: Sat, 11 Jul 2026 17:42:47 GMT
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /api/auth/logout
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 98
+X-Ratelimit-Reset: 2026-07-11T17:43:47.078Z
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::iad1::mt46c-1783791767032-f9d08466fa95
+X-Xss-Protection: 1; mode=block
+Transfer-Encoding: chunked
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Logout berhasil&quot;
+}
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=0, must-revalidate
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Sat, 11 Jul 2026 17:42:50 GMT
 Permissions-Policy: geolocation=(), microphone=(), camera=()
 Referrer-Policy: strict-origin-when-cross-origin
 Server: Vercel
@@ -254,9 +197,46 @@ X-Frame-Options: DENY
 X-Matched-Path: /api/siswa/[id]
 X-Ratelimit-Limit: 100
 X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T17:17:33.601Z
+X-Ratelimit-Reset: 2026-07-11T17:43:49.632Z
+X-Vercel-Cache: BYPASS
+X-Vercel-Id: sin1::iad1::p95wd-1783791769612-8ed89b4ab9d6
+X-Xss-Protection: 1; mode=block
+Transfer-Encoding: chunked
+
+{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;de930f25-8cff-4c6f-bd4c-8b8a7d418a84&quot;,
+        &quot;nama&quot;: &quot;Tamaki Ridho&quot;,
+        &quot;nis&quot;: &quot;998875&quot;,
+        &quot;kelas&quot;: &quot;X-RPL-1&quot;,
+        &quot;jurusan&quot;: &quot;RPL&quot;,
+        &quot;email&quot;: &quot;ridhotest1783791755000@gmail.com&quot;,
+        &quot;telepon&quot;: &quot;083791755001&quot;,
+        &quot;alamat&quot;: &quot;Kalimantan&quot;,
+        &quot;created_by&quot;: &quot;unknown&quot;,
+        &quot;created_at&quot;: &quot;2026-07-11T17:42:46.874553+00:00&quot;,
+        &quot;updated_at&quot;: &quot;2026-07-11T17:42:46.874553+00:00&quot;
+    }
+}
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=0, must-revalidate
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Sat, 11 Jul 2026 17:42:54 GMT
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /api/siswa/[id]
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 98
+X-Ratelimit-Reset: 2026-07-11T17:43:51.066Z
 X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::7ckkg-1783790193583-0d1a458d552e
+X-Vercel-Id: sin1::iad1::kczzw-1783791771043-8cfcb5974285
 X-Xss-Protection: 1; mode=block
 Transfer-Encoding: chunked
 
@@ -264,26 +244,26 @@ Transfer-Encoding: chunked
     &quot;success&quot;: true,
     &quot;message&quot;: &quot;Siswa berhasil diupdate&quot;,
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;cc94a5a7-d548-42e7-aa4a-efbadc0646fc&quot;,
+        &quot;id&quot;: &quot;de930f25-8cff-4c6f-bd4c-8b8a7d418a84&quot;,
         &quot;nama&quot;: &quot;Iroha Ridho&quot;,
         &quot;nis&quot;: &quot;998875&quot;,
         &quot;kelas&quot;: &quot;XI-TKJ-2&quot;,
         &quot;jurusan&quot;: &quot;RPL&quot;,
-        &quot;email&quot;: &quot;ridhotest1783790182496@gmail.com&quot;,
-        &quot;telepon&quot;: &quot;083790182497&quot;,
+        &quot;email&quot;: &quot;ridhotest1783791755000@gmail.com&quot;,
+        &quot;telepon&quot;: &quot;083791755001&quot;,
         &quot;alamat&quot;: &quot;Banjarmasin, Kalimantan Selatan&quot;,
         &quot;created_by&quot;: &quot;unknown&quot;,
-        &quot;created_at&quot;: &quot;2026-07-11T17:16:29.64529+00:00&quot;,
-        &quot;updated_at&quot;: &quot;2026-07-11T17:16:35.386839+00:00&quot;
+        &quot;created_at&quot;: &quot;2026-07-11T17:42:46.874553+00:00&quot;,
+        &quot;updated_at&quot;: &quot;2026-07-11T17:42:53.849258+00:00&quot;
     }
 }
 Status Code: 200
-Response: {&quot;success&quot;:true,&quot;message&quot;:&quot;Siswa berhasil diupdate&quot;,&quot;data&quot;:{&quot;id&quot;:&quot;cc94a5a7-d548-42e7-aa4a-efbadc0646fc&quot;,&quot;nama&quot;:&quot;Iroha Ridho&quot;,&quot;nis&quot;:&quot;998875&quot;,&quot;kelas&quot;:&quot;XI-TKJ-2&quot;,&quot;jurusan&quot;:&quot;RPL&quot;,&quot;email&quot;:&quot;ridhotest1783790182496@gmail.com&quot;,&quot;telepon&quot;:&quot;083790182497&quot;,&quot;alamat&quot;:&quot;Banjarmasin, Kalimantan Selatan&quot;,&quot;created_by&quot;:&quot;unknown&quot;,&quot;created_at&quot;:&quot;2026-07-11T17:16:29.64529+00:00&quot;,&quot;updated_at&quot;:&quot;2026-07-11T17:16:35.386839+00:00&quot;}}
+Response: {&quot;success&quot;:true,&quot;message&quot;:&quot;Siswa berhasil diupdate&quot;,&quot;data&quot;:{&quot;id&quot;:&quot;de930f25-8cff-4c6f-bd4c-8b8a7d418a84&quot;,&quot;nama&quot;:&quot;Iroha Ridho&quot;,&quot;nis&quot;:&quot;998875&quot;,&quot;kelas&quot;:&quot;XI-TKJ-2&quot;,&quot;jurusan&quot;:&quot;RPL&quot;,&quot;email&quot;:&quot;ridhotest1783791755000@gmail.com&quot;,&quot;telepon&quot;:&quot;083791755001&quot;,&quot;alamat&quot;:&quot;Banjarmasin, Kalimantan Selatan&quot;,&quot;created_by&quot;:&quot;unknown&quot;,&quot;created_at&quot;:&quot;2026-07-11T17:42:46.874553+00:00&quot;,&quot;updated_at&quot;:&quot;2026-07-11T17:42:53.849258+00:00&quot;}}
 HTTP/1.1 200 OK
 Cache-Control: public, max-age=0, must-revalidate
 Content-Encoding: gzip
 Content-Type: application/json
-Date: Sat, 11 Jul 2026 17:16:36 GMT
+Date: Sat, 11 Jul 2026 17:42:54 GMT
 Permissions-Policy: geolocation=(), microphone=(), camera=()
 Referrer-Policy: strict-origin-when-cross-origin
 Server: Vercel
@@ -294,9 +274,9 @@ X-Frame-Options: DENY
 X-Matched-Path: /api/siswa/[id]
 X-Ratelimit-Limit: 100
 X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T17:17:35.867Z
+X-Ratelimit-Reset: 2026-07-11T17:43:54.337Z
 X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::s5t9z-1783790195848-a99a43c1823e
+X-Vercel-Id: sin1::iad1::g59rq-1783791774318-287c801adc61
 X-Xss-Protection: 1; mode=block
 Transfer-Encoding: chunked
 
@@ -304,26 +284,26 @@ Transfer-Encoding: chunked
     &quot;success&quot;: true,
     &quot;message&quot;: &quot;Siswa berhasil diupdate&quot;,
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;cc94a5a7-d548-42e7-aa4a-efbadc0646fc&quot;,
+        &quot;id&quot;: &quot;de930f25-8cff-4c6f-bd4c-8b8a7d418a84&quot;,
         &quot;nama&quot;: &quot;Kaname Ridho&quot;,
         &quot;nis&quot;: &quot;998875&quot;,
         &quot;kelas&quot;: &quot;XI-TKJ-2&quot;,
         &quot;jurusan&quot;: &quot;RPL&quot;,
-        &quot;email&quot;: &quot;ridhotest1783790182496@gmail.com&quot;,
-        &quot;telepon&quot;: &quot;083790182497&quot;,
+        &quot;email&quot;: &quot;ridhotest1783791755000@gmail.com&quot;,
+        &quot;telepon&quot;: &quot;083791755001&quot;,
         &quot;alamat&quot;: &quot;Banjarmasin, Kalimantan Selatan&quot;,
         &quot;created_by&quot;: &quot;unknown&quot;,
-        &quot;created_at&quot;: &quot;2026-07-11T17:16:29.64529+00:00&quot;,
-        &quot;updated_at&quot;: &quot;2026-07-11T17:16:36.402105+00:00&quot;
+        &quot;created_at&quot;: &quot;2026-07-11T17:42:46.874553+00:00&quot;,
+        &quot;updated_at&quot;: &quot;2026-07-11T17:42:54.864611+00:00&quot;
     }
 }
 Status Code: 200
-Response: {&quot;success&quot;:true,&quot;message&quot;:&quot;Siswa berhasil diupdate&quot;,&quot;data&quot;:{&quot;id&quot;:&quot;cc94a5a7-d548-42e7-aa4a-efbadc0646fc&quot;,&quot;nama&quot;:&quot;Kaname Ridho&quot;,&quot;nis&quot;:&quot;998875&quot;,&quot;kelas&quot;:&quot;XI-TKJ-2&quot;,&quot;jurusan&quot;:&quot;RPL&quot;,&quot;email&quot;:&quot;ridhotest1783790182496@gmail.com&quot;,&quot;telepon&quot;:&quot;083790182497&quot;,&quot;alamat&quot;:&quot;Banjarmasin, Kalimantan Selatan&quot;,&quot;created_by&quot;:&quot;unknown&quot;,&quot;created_at&quot;:&quot;2026-07-11T17:16:29.64529+00:00&quot;,&quot;updated_at&quot;:&quot;2026-07-11T17:16:36.402105+00:00&quot;}}
+Response: {&quot;success&quot;:true,&quot;message&quot;:&quot;Siswa berhasil diupdate&quot;,&quot;data&quot;:{&quot;id&quot;:&quot;de930f25-8cff-4c6f-bd4c-8b8a7d418a84&quot;,&quot;nama&quot;:&quot;Kaname Ridho&quot;,&quot;nis&quot;:&quot;998875&quot;,&quot;kelas&quot;:&quot;XI-TKJ-2&quot;,&quot;jurusan&quot;:&quot;RPL&quot;,&quot;email&quot;:&quot;ridhotest1783791755000@gmail.com&quot;,&quot;telepon&quot;:&quot;083791755001&quot;,&quot;alamat&quot;:&quot;Banjarmasin, Kalimantan Selatan&quot;,&quot;created_by&quot;:&quot;unknown&quot;,&quot;created_at&quot;:&quot;2026-07-11T17:42:46.874553+00:00&quot;,&quot;updated_at&quot;:&quot;2026-07-11T17:42:54.864611+00:00&quot;}}
 HTTP/1.1 200 OK
 Cache-Control: public, max-age=0, must-revalidate
 Content-Encoding: gzip
 Content-Type: application/json
-Date: Sat, 11 Jul 2026 17:16:37 GMT
+Date: Sat, 11 Jul 2026 17:42:56 GMT
 Permissions-Policy: geolocation=(), microphone=(), camera=()
 Referrer-Policy: strict-origin-when-cross-origin
 Server: Vercel
@@ -334,9 +314,9 @@ X-Frame-Options: DENY
 X-Matched-Path: /api/siswa/[id]
 X-Ratelimit-Limit: 100
 X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T17:17:36.852Z
+X-Ratelimit-Reset: 2026-07-11T17:43:55.331Z
 X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::tvmt2-1783790196833-fe68ceb5f2d7
+X-Vercel-Id: sin1::iad1::2l8fv-1783791775313-222e82da6b05
 X-Xss-Protection: 1; mode=block
 Transfer-Encoding: chunked
 
@@ -357,7 +337,7 @@ Response: {&quot;success&quot;:true,&quot;message&quot;:&quot;Siswa berhasil dih
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at Jul 12, 2026, 1:16:36 AM</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at Jul 12, 2026, 1:42:56 AM</p>
 </div>
 </div>
 </body>
