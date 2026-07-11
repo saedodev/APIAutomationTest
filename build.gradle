@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id ("io.qameta.allure") version "2.12.0"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("org.testng:testng:7.12.0")
+    testImplementation("io.rest-assured:rest-assured:6.0.0")
+    implementation("org.json:json:20260522")
+    testImplementation 'io.rest-assured:json-schema-validator:5.4.0'
+}
+
+test {
+    useTestNG {
+        suites "src/test/resources/studentapi.xml"
+    }
+
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+}
