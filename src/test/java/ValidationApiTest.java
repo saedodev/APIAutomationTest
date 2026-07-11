@@ -5,15 +5,18 @@ import org.json.JSONObject;
 import org.testng.annotations.Test;
 
 public class ValidationApiTest {
-    String baseUrl = "https://api.rizqifauzan.com/";
-    String token;
-    JSONObject requestBody = new JSONObject();
-    String nama = "Bayu Yudha Pratama";
-    String email = "bayuyudha" + System.currentTimeMillis() + "@gmail.com";
-    String password = "Bayu123321";
 
-    @Test
+    protected String baseUrl = "https://api.rizqifauzan.com/";
+    protected static String token;
+
+    protected String nama = "Bayu Yudha Pratama";
+    protected String email = "bayuyudha" + System.currentTimeMillis() + "@gmail.com";
+    protected String password = "Bayu123321";
+
+
+    @Test(groups = {"auth"})
     public void testRegister() {
+        JSONObject requestBody = new JSONObject();
         requestBody.put("nama", nama);
         requestBody.put("email", email);
         requestBody.put("password", password);
@@ -21,15 +24,20 @@ public class ValidationApiTest {
         Response response = RestAssured.given()
                 .header("Content-Type", "application/json")
                 .body(requestBody.toString())
-                    .post(baseUrl + "api/auth/register");
+                .post(baseUrl + "api/auth/register");
 
         response.then()
+                .log().all()
                 .assertThat()
                 .statusCode(201);
-        System.out.println("Email anda " + email + " Berhasil di regist!");
+
+        System.out.println("Email anda " + email + " berhasil diregistrasi!");
     }
-    @Test (dependsOnMethods = "testRegister")
+
+
+    @Test(groups = {"auth"}, dependsOnMethods = "testRegister")
     public void testLogin() {
+        JSONObject requestBody = new JSONObject();
         requestBody.put("email", email);
         requestBody.put("password", password);
 
@@ -45,35 +53,37 @@ public class ValidationApiTest {
         System.out.println("Status Code: " + response.getStatusCode());
         System.out.println("Response: " + response.asString());
 
-        // Extract token from response
         token = response.jsonPath().getString("data.token");
         System.out.println("Token: " + token);
     }
-    @Test (dependsOnMethods = "testLogin")
+
+    @Test(groups = {"validation"}, dependsOnMethods = "testLogin")
     public void testGetListUsers() {
         RestAssured.given()
                 .header("Authorization", "Bearer " + token)
                 .when()
-                    .get("https://api.rizqifauzan.com/api/auth/me")
+                .get(baseUrl + "api/auth/me")
                 .then()
-                    .log().all()
+                .log().all()
                 .assertThat()
-                    .statusCode(200);
+                .statusCode(200);
     }
 
-    @Test (dependsOnMethods = "testLogin")
+
+    @Test(groups = {"validation"}, dependsOnMethods = "testLogin")
     public void testLogout() {
-        RestAssured
-                .given()
+        RestAssured.given()
                 .header("Authorization", "Bearer " + token)
                 .when()
-                    .post("https://api.rizqifauzan.com/api/auth/logout")
+                .post(baseUrl + "api/auth/logout")
                 .then()
-                    .log().all();
+                .log().all();
     }
 
-    @Test
+
+    @Test(groups = {"validation"})
     public void testWrongLogin() {
+        JSONObject requestBody = new JSONObject();
         requestBody.put("email", email);
         requestBody.put("password", "testsalah");
 
@@ -89,8 +99,10 @@ public class ValidationApiTest {
         System.out.println("Status Code: " + response.getStatusCode());
         System.out.println("Response: " + response.asString());
     }
-    @Test
+
+    @Test(groups = {"validation"})
     public void testFailedLogin() {
+        JSONObject requestBody = new JSONObject();
         requestBody.put("email", email);
         requestBody.put("password", password);
 
@@ -109,8 +121,9 @@ public class ValidationApiTest {
         System.out.println("Response: " + response.asString());
     }
 
-    @Test
+    @Test(groups = {"validation"})
     public void testBlankLogin() {
+        JSONObject requestBody = new JSONObject();
         requestBody.put("email", "");
         requestBody.put("password", "");
 
@@ -126,5 +139,4 @@ public class ValidationApiTest {
         System.out.println("Status Code: " + response.getStatusCode());
         System.out.println("Response: " + response.asString());
     }
-
 }

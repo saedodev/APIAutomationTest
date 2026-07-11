@@ -1,68 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StudentManagement" tests="13" skipped="0" failures="1" errors="0" timestamp="2026-07-11T16:52:03" hostname="KUDANIL" time="23.358">
+<testsuite name="StudentManagement" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-07-11T17:16:22" hostname="KUDANIL" time="14.221">
   <properties/>
-  <testcase name="testFailedLogin" classname="StudentManagement" time="4.541">
-    <failure message="java.lang.AssertionError: 1 expectation failed.&#10;JSON path data.email doesn't match.&#10;Expected: wrongemail@example.com&#10;  Actual: null&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
-JSON path data.email doesn't match.
-Expected: wrongemail@example.com
-  Actual: null
-
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:274)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:121)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-	at ValidationApiTest.testFailedLogin(ValidationApiTest.java:104)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-</failure>
-  </testcase>
-  <testcase name="testRegister" classname="StudentManagement" time="2.196"/>
-  <testcase name="testLogin" classname="StudentManagement" time="0.797"/>
-  <testcase name="createStudent" classname="StudentManagement" time="1.564"/>
-  <testcase name="getAllStudent" classname="StudentManagement" time="1.95"/>
-  <testcase name="getByIdStudent" classname="StudentManagement" time="1.187"/>
-  <testcase name="testUpdateStudent" classname="StudentManagement" time="4.442"/>
-  <testcase name="testPatchStudent" classname="StudentManagement" time="2.228"/>
-  <testcase name="testDestroyStudent" classname="StudentManagement" time="1.954"/>
-  <testcase name="testGetListUsers" classname="StudentManagement" time="0.688"/>
-  <testcase name="testLogout" classname="StudentManagement" time="0.421"/>
-  <testcase name="testWrongLogin" classname="StudentManagement" time="0.795"/>
-  <testcase name="testBlankLogin" classname="StudentManagement" time="0.445"/>
-  <system-out><![CDATA[Email anda bayuyudha1783788722870@gmail.com Berhasil di regist!
-Status Code: 200
-Response: {"success":true,"message":"Login berhasil","data":{"user":{"id":"8ed70e3e-ac52-4a11-9d6e-309654526819","email":"bayuyudha1783788723017@gmail.com","nama":"Bayu Yudha Pratama","created_at":"2026-07-11T16:52:10.524493+00:00","updated_at":"2026-07-11T16:52:10.524493+00:00"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI4ZWQ3MGUzZS1hYzUyLTRhMTEtOWQ2ZS0zMDk2NTQ1MjY4MTkiLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3ODg3MjMwMTdAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc4ODczMSwiZXhwIjoxNzg0MzkzNTMxfQ.lfYW0qSSsDGf0Puw6buBddYn0pZYXUvDfOiyvD2aK4Y"}}
-Token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI4ZWQ3MGUzZS1hYzUyLTRhMTEtOWQ2ZS0zMDk2NTQ1MjY4MTkiLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3ODg3MjMwMTdAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc4ODczMSwiZXhwIjoxNzg0MzkzNTMxfQ.lfYW0qSSsDGf0Puw6buBddYn0pZYXUvDfOiyvD2aK4Y
-Status Code: 200
-Response: {"success":true,"message":"Login berhasil","data":{"user":{"id":"1b651b73-abb1-4c00-941c-3ad1a97f0def","email":"bayuyudha1783788722870@gmail.com","nama":"Bayu Yudha Pratama","created_at":"2026-07-11T16:52:10.386069+00:00","updated_at":"2026-07-11T16:52:10.386069+00:00"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxYjY1MWI3My1hYmIxLTRjMDAtOTQxYy0zYWQxYTk3ZjBkZWYiLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3ODg3MjI4NzBAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc4ODczMSwiZXhwIjoxNzg0MzkzNTMxfQ.EDFA00t9BEmNgp8mRkH4c9kfhbnQ97DS_qZpvu6e2QA"}}
-Token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxYjY1MWI3My1hYmIxLTRjMDAtOTQxYy0zYWQxYTk3ZjBkZWYiLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3ODg3MjI4NzBAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc4ODczMSwiZXhwIjoxNzg0MzkzNTMxfQ.EDFA00t9BEmNgp8mRkH4c9kfhbnQ97DS_qZpvu6e2QA
-HTTP/1.1 200 OK
+  <testcase name="testRegister" classname="StudentManagement" time="3.472"/>
+  <testcase name="testLogin" classname="StudentManagement" time="0.848"/>
+  <testcase name="createStudent" classname="StudentManagement" time="2.062"/>
+  <testcase name="getAllStudent" classname="StudentManagement" time="1.993"/>
+  <testcase name="getByIdStudent" classname="StudentManagement" time="0.746"/>
+  <testcase name="testUpdateStudent" classname="StudentManagement" time="2.963"/>
+  <testcase name="testPatchStudent" classname="StudentManagement" time="1.003"/>
+  <testcase name="testDestroyStudent" classname="StudentManagement" time="0.981"/>
+  <system-out><![CDATA[HTTP/1.1 201 Created
 Cache-Control: public, max-age=0, must-revalidate
-Content-Encoding: gzip
 Content-Type: application/json
-Date: Sat, 11 Jul 2026 16:52:13 GMT
+Date: Sat, 11 Jul 2026 17:16:26 GMT
 Permissions-Policy: geolocation=(), microphone=(), camera=()
 Referrer-Policy: strict-origin-when-cross-origin
 Server: Vercel
@@ -70,24 +20,117 @@ Strict-Transport-Security: max-age=63072000
 Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
-X-Matched-Path: /api/auth/logout
+X-Matched-Path: /api/auth/register
 X-Ratelimit-Limit: 100
 X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T16:53:12.913Z
+X-Ratelimit-Reset: 2026-07-11T17:17:25.822Z
 X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::4cpxm-1783788732891-e7b5aeff706b
+X-Vercel-Id: sin1::iad1::9c6zz-1783790185802-041b7d94db0d
 X-Xss-Protection: 1; mode=block
 Transfer-Encoding: chunked
 
 {
     "success": true,
-    "message": "Logout berhasil"
+    "message": "Registrasi berhasil",
+    "data": {
+        "id": "f4621c14-f714-4386-8960-d7a772ca58d6",
+        "email": "bayuyudha1783790182496@gmail.com",
+        "nama": "Bayu Yudha Pratama",
+        "created_at": "2026-07-11T17:16:26.511519+00:00",
+        "updated_at": "2026-07-11T17:16:26.511519+00:00"
+    }
 }
+HTTP/1.1 401 Unauthorized
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Sat, 11 Jul 2026 17:16:26 GMT
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /api/auth/login
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 98
+X-Ratelimit-Reset: 2026-07-11T17:17:25.849Z
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::iad1::2l8fv-1783790185799-36e996a89aa7
+X-Xss-Protection: 1; mode=block
+Transfer-Encoding: chunked
+
+{
+    "success": false,
+    "error": "Email atau password salah"
+}
+Email anda bayuyudha1783790182496@gmail.com berhasil diregistrasi!
+HTTP/1.1 201 Created
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Sat, 11 Jul 2026 17:16:28 GMT
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /api/auth/register
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 98
+X-Ratelimit-Reset: 2026-07-11T17:17:27.919Z
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::iad1::4zc4f-1783790187893-23c75d029c74
+X-Xss-Protection: 1; mode=block
+Transfer-Encoding: chunked
+
+{
+    "success": true,
+    "message": "Registrasi berhasil",
+    "data": {
+        "id": "6676c0b3-f468-4c93-89f4-4fca0bf7532a",
+        "email": "bayuyudha1783790182410@gmail.com",
+        "nama": "Bayu Yudha Pratama",
+        "created_at": "2026-07-11T17:16:28.624798+00:00",
+        "updated_at": "2026-07-11T17:16:28.624798+00:00"
+    }
+}
+Email anda bayuyudha1783790182410@gmail.com berhasil diregistrasi!
+Status Code: 200
+Response: {"success":true,"message":"Login berhasil","data":{"user":{"id":"6676c0b3-f468-4c93-89f4-4fca0bf7532a","email":"bayuyudha1783790182410@gmail.com","nama":"Bayu Yudha Pratama","created_at":"2026-07-11T17:16:28.624798+00:00","updated_at":"2026-07-11T17:16:28.624798+00:00"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2Njc2YzBiMy1mNDY4LTRjOTMtODlmNC00ZmNhMGJmNzUzMmEiLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3OTAxODI0MTBAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc5MDE5MCwiZXhwIjoxNzg0Mzk0OTkwfQ.DpPFH5PR-Ka8dw0TqR5xpgLtCXw4EyrPbXa4ZYCPciU"}}
+Token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI2Njc2YzBiMy1mNDY4LTRjOTMtODlmNC00ZmNhMGJmNzUzMmEiLCJlbWFpbCI6ImJheXV5dWRoYTE3ODM3OTAxODI0MTBAZ21haWwuY29tIiwibmFtYSI6IkJheXUgWXVkaGEgUHJhdGFtYSIsImlhdCI6MTc4Mzc5MDE5MCwiZXhwIjoxNzg0Mzk0OTkwfQ.DpPFH5PR-Ka8dw0TqR5xpgLtCXw4EyrPbXa4ZYCPciU
+HTTP/1.1 401 Unauthorized
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: application/json
+Date: Sat, 11 Jul 2026 17:16:31 GMT
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /api/auth/login
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 98
+X-Ratelimit-Reset: 2026-07-11T17:17:31.443Z
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::iad1::s97qr-1783790191420-3397b623f089
+X-Xss-Protection: 1; mode=block
+Transfer-Encoding: chunked
+
+{
+    "success": false,
+    "error": "Email atau password salah"
+}
+Status Code: 401
+Response: {"success":false,"error":"Email atau password salah"}
 HTTP/1.1 200 OK
 Cache-Control: public, max-age=0, must-revalidate
 Content-Encoding: gzip
 Content-Type: application/json
-Date: Sat, 11 Jul 2026 16:52:16 GMT
+Date: Sat, 11 Jul 2026 17:16:35 GMT
 Permissions-Policy: geolocation=(), microphone=(), camera=()
 Referrer-Policy: strict-origin-when-cross-origin
 Server: Vercel
@@ -98,142 +141,98 @@ X-Frame-Options: DENY
 X-Matched-Path: /api/siswa/[id]
 X-Ratelimit-Limit: 100
 X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T16:53:15.283Z
-X-Vercel-Cache: BYPASS
-X-Vercel-Id: sin1::iad1::dzrpz-1783788735251-10cc47a91e37
+X-Ratelimit-Reset: 2026-07-11T17:17:33.601Z
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::iad1::7ckkg-1783790193583-0d1a458d552e
 X-Xss-Protection: 1; mode=block
 Transfer-Encoding: chunked
 
 {
     "success": true,
+    "message": "Siswa berhasil diupdate",
     "data": {
-        "id": "27ea2773-ee2c-496d-b925-e0697e44e7a2",
-        "nama": "annisa ferdeani",
-        "nis": "112233",
-        "kelas": "X-IPA-2",
-        "jurusan": "IPA",
-        "email": "annisa123@amail.com",
-        "telepon": "0812345678",
-        "alamat": "indonesia konoha",
+        "id": "cc94a5a7-d548-42e7-aa4a-efbadc0646fc",
+        "nama": "Iroha Ridho",
+        "nis": "998875",
+        "kelas": "XI-TKJ-2",
+        "jurusan": "RPL",
+        "email": "ridhotest1783790182496@gmail.com",
+        "telepon": "083790182497",
+        "alamat": "Banjarmasin, Kalimantan Selatan",
         "created_by": "unknown",
-        "created_at": "2026-07-04T04:53:16.123259+00:00",
-        "updated_at": "2026-07-04T04:53:16.123259+00:00"
+        "created_at": "2026-07-11T17:16:29.64529+00:00",
+        "updated_at": "2026-07-11T17:16:35.386839+00:00"
     }
 }
 Status Code: 200
-Response: {"success":true,"message":"Siswa berhasil diupdate","data":{"id":"415c62bc-7924-437a-8174-a3b7ef625400","nama":"Iroha Ridho","nis":"998875","kelas":"XI-TKJ-2","jurusan":"RPL","email":"ridhotest1783788723017@gmail.com","telepon":"083788723018","alamat":"Banjarmasin, Kalimantan Selatan","created_by":"unknown","created_at":"2026-07-11T16:52:12.831965+00:00","updated_at":"2026-07-11T16:52:20.477886+00:00"}}
+Response: {"success":true,"message":"Siswa berhasil diupdate","data":{"id":"cc94a5a7-d548-42e7-aa4a-efbadc0646fc","nama":"Iroha Ridho","nis":"998875","kelas":"XI-TKJ-2","jurusan":"RPL","email":"ridhotest1783790182496@gmail.com","telepon":"083790182497","alamat":"Banjarmasin, Kalimantan Selatan","created_by":"unknown","created_at":"2026-07-11T17:16:29.64529+00:00","updated_at":"2026-07-11T17:16:35.386839+00:00"}}
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=0, must-revalidate
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Sat, 11 Jul 2026 17:16:36 GMT
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /api/siswa/[id]
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 98
+X-Ratelimit-Reset: 2026-07-11T17:17:35.867Z
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::iad1::s5t9z-1783790195848-a99a43c1823e
+X-Xss-Protection: 1; mode=block
+Transfer-Encoding: chunked
+
+{
+    "success": true,
+    "message": "Siswa berhasil diupdate",
+    "data": {
+        "id": "cc94a5a7-d548-42e7-aa4a-efbadc0646fc",
+        "nama": "Kaname Ridho",
+        "nis": "998875",
+        "kelas": "XI-TKJ-2",
+        "jurusan": "RPL",
+        "email": "ridhotest1783790182496@gmail.com",
+        "telepon": "083790182497",
+        "alamat": "Banjarmasin, Kalimantan Selatan",
+        "created_by": "unknown",
+        "created_at": "2026-07-11T17:16:29.64529+00:00",
+        "updated_at": "2026-07-11T17:16:36.402105+00:00"
+    }
+}
 Status Code: 200
-Response: {"success":true,"message":"Siswa berhasil diupdate","data":{"id":"415c62bc-7924-437a-8174-a3b7ef625400","nama":"Kaname Ridho","nis":"998875","kelas":"XI-TKJ-2","jurusan":"RPL","email":"ridhotest1783788723017@gmail.com","telepon":"083788723018","alamat":"Banjarmasin, Kalimantan Selatan","created_by":"unknown","created_at":"2026-07-11T16:52:12.831965+00:00","updated_at":"2026-07-11T16:52:22.711309+00:00"}}
+Response: {"success":true,"message":"Siswa berhasil diupdate","data":{"id":"cc94a5a7-d548-42e7-aa4a-efbadc0646fc","nama":"Kaname Ridho","nis":"998875","kelas":"XI-TKJ-2","jurusan":"RPL","email":"ridhotest1783790182496@gmail.com","telepon":"083790182497","alamat":"Banjarmasin, Kalimantan Selatan","created_by":"unknown","created_at":"2026-07-11T17:16:29.64529+00:00","updated_at":"2026-07-11T17:16:36.402105+00:00"}}
+HTTP/1.1 200 OK
+Cache-Control: public, max-age=0, must-revalidate
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Sat, 11 Jul 2026 17:16:37 GMT
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Matched-Path: /api/siswa/[id]
+X-Ratelimit-Limit: 100
+X-Ratelimit-Remaining: 98
+X-Ratelimit-Reset: 2026-07-11T17:17:36.852Z
+X-Vercel-Cache: MISS
+X-Vercel-Id: sin1::iad1::tvmt2-1783790196833-fe68ceb5f2d7
+X-Xss-Protection: 1; mode=block
+Transfer-Encoding: chunked
+
+{
+    "success": true,
+    "message": "Siswa berhasil dihapus"
+}
 Status Code: 200
 Response: {"success":true,"message":"Siswa berhasil dihapus"}
-HTTP/1.1 200 OK
-Cache-Control: public, max-age=0, must-revalidate
-Content-Encoding: gzip
-Content-Type: application/json
-Date: Sat, 11 Jul 2026 16:52:25 GMT
-Permissions-Policy: geolocation=(), microphone=(), camera=()
-Referrer-Policy: strict-origin-when-cross-origin
-Server: Vercel
-Strict-Transport-Security: max-age=63072000
-Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Matched-Path: /api/auth/me
-X-Ratelimit-Limit: 100
-X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T16:53:25.091Z
-X-Vercel-Cache: BYPASS
-X-Vercel-Id: sin1::iad1::89l45-1783788745067-2e8c323b2497
-X-Xss-Protection: 1; mode=block
-Transfer-Encoding: chunked
-
-{
-    "success": true,
-    "data": {
-        "id": "8ed70e3e-ac52-4a11-9d6e-309654526819",
-        "email": "bayuyudha1783788723017@gmail.com",
-        "nama": "Bayu Yudha Pratama",
-        "created_at": "2026-07-11T16:52:10.524493+00:00",
-        "updated_at": "2026-07-11T16:52:10.524493+00:00"
-    }
-}
-HTTP/1.1 200 OK
-Cache-Control: public, max-age=0, must-revalidate
-Content-Encoding: gzip
-Content-Type: application/json
-Date: Sat, 11 Jul 2026 16:52:25 GMT
-Permissions-Policy: geolocation=(), microphone=(), camera=()
-Referrer-Policy: strict-origin-when-cross-origin
-Server: Vercel
-Strict-Transport-Security: max-age=63072000
-Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Matched-Path: /api/auth/logout
-X-Ratelimit-Limit: 100
-X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T16:53:25.777Z
-X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::ts2mx-1783788745759-8fff469dfcdf
-X-Xss-Protection: 1; mode=block
-Transfer-Encoding: chunked
-
-{
-    "success": true,
-    "message": "Logout berhasil"
-}
-HTTP/1.1 401 Unauthorized
-Cache-Control: public, max-age=0, must-revalidate
-Content-Type: application/json
-Date: Sat, 11 Jul 2026 16:52:26 GMT
-Permissions-Policy: geolocation=(), microphone=(), camera=()
-Referrer-Policy: strict-origin-when-cross-origin
-Server: Vercel
-Strict-Transport-Security: max-age=63072000
-Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Matched-Path: /api/auth/login
-X-Ratelimit-Limit: 100
-X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T16:53:26.205Z
-X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::w644f-1783788746184-22cf8726b4ce
-X-Xss-Protection: 1; mode=block
-Transfer-Encoding: chunked
-
-{
-    "success": false,
-    "error": "Email atau password salah"
-}
-Status Code: 401
-Response: {"success":false,"error":"Email atau password salah"}
-HTTP/1.1 400 Bad Request
-Cache-Control: public, max-age=0, must-revalidate
-Content-Type: application/json
-Date: Sat, 11 Jul 2026 16:52:27 GMT
-Permissions-Policy: geolocation=(), microphone=(), camera=()
-Referrer-Policy: strict-origin-when-cross-origin
-Server: Vercel
-Strict-Transport-Security: max-age=63072000
-Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Matched-Path: /api/auth/login
-X-Ratelimit-Limit: 100
-X-Ratelimit-Remaining: 98
-X-Ratelimit-Reset: 2026-07-11T16:53:27.012Z
-X-Vercel-Cache: MISS
-X-Vercel-Id: sin1::iad1::9vdqv-1783788746985-d975f6badd45
-X-Xss-Protection: 1; mode=block
-Transfer-Encoding: chunked
-
-{
-    "success": false,
-    "error": "Validasi gagal: Email tidak valid, Password tidak boleh kosong"
-}
-Status Code: 400
-Response: {"success":false,"error":"Validasi gagal: Email tidak valid, Password tidak boleh kosong"}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

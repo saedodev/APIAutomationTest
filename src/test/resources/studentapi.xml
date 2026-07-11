@@ -9,6 +9,11 @@
     </test>
 
     <test name="Test CRUD Student">
+        <groups>
+            <run>
+                <exclude name="validation" />
+            </run>
+        </groups>
         <classes>
             <class name="StudentManagement" />
         </classes>

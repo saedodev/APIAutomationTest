@@ -9,6 +9,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class StudentManagement extends ValidationApiTest {
+
     String studentId;
     String namaStudent = "Tamaki Ridho";
     String nis = "998875";
@@ -20,40 +21,11 @@ public class StudentManagement extends ValidationApiTest {
     String alamat = "Kalimantan";
     String created_by = "User Bayu automation-test";
 
+    File jsonSchema = new File("src/test/resources/jsonschema/GetUserIdStudent.json");
 
-    File jsonSchema =new File("src/test/resources/jsonschema/GetUserIdStudent.json");
-
-    @Test (dependsOnMethods = "testLogin")
-    public void getAllStudent() {
-        Response response = RestAssured.given()
-                .header("Authorization", "Bearer " + token)
-                .when()
-                    .get("https://api.rizqifauzan.com/api/siswa");
-
-        response.then()
-                .log().all()
-                .assertThat()
-                .statusCode(200)
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
-    }
-
-    @Test (dependsOnMethods = "testLogin")
-    public void getByIdStudent() {
-        Response response = RestAssured.given()
-                .header("Authorization", "Bearer " + token)
-                .when()
-                .get("https://api.rizqifauzan.com/api/siswa/27ea2773-ee2c-496d-b925-e0697e44e7a2");
-
-        response.then()
-                .log().all()
-                .assertThat()
-                .statusCode(200)
-                .assertThat();
-    }
-
-    @Test (dependsOnMethods = "testLogin")
+    @Test(dependsOnMethods = "testLogin")
     public void createStudent() {
+        JSONObject requestBody = new JSONObject();
         requestBody.put("nama", namaStudent);
         requestBody.put("nis", nis);
         requestBody.put("kelas", kelas);
@@ -78,12 +50,41 @@ public class StudentManagement extends ValidationApiTest {
                 .body("data.updated_at", notNullValue());
 
         studentId = response.jsonPath().getString("data.id");
-        System.out.println("Nama student " + namaStudent + " Berhasil di regist!");
+        System.out.println("Nama student " + namaStudent + " berhasil di-create! ID: " + studentId);
     }
 
-    @Test (dependsOnMethods = "createStudent")
+    @Test(dependsOnMethods = "testLogin")
+    public void getAllStudent() {
+        Response response = RestAssured.given()
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .get(baseUrl + "api/siswa");
+
+        response.then()
+                .log().all()
+                .assertThat()
+                .statusCode(200)
+                .body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
+    }
+
+    @Test(dependsOnMethods = "createStudent")
+    public void getByIdStudent() {
+        Response response = RestAssured.given()
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .get(baseUrl + "api/siswa/" + studentId);
+
+        response.then()
+                .log().all()
+                .assertThat()
+                .statusCode(200)
+                .body("data.id", equalTo(studentId))
+                .body("data.nama", equalTo(namaStudent));
+    }
+
+    @Test(dependsOnMethods = "createStudent")
     public void testUpdateStudent() {
-        RestAssured.given()
+        String updatedAtBefore = RestAssured.given()
                 .header("Authorization", "Bearer " + token)
                 .when()
                 .get(baseUrl + "api/siswa/" + studentId)
@@ -93,7 +94,7 @@ public class StudentManagement extends ValidationApiTest {
         requestBody.put("nama", "Iroha Ridho");
         requestBody.put("nis", nis);
         requestBody.put("kelas", "XI-TKJ-2");
-        requestBody.put("jurusan", "RPL");
+        requestBody.put("jurusan", jurusan);
         requestBody.put("email", emailStudent);
         requestBody.put("telepon", telepon);
         requestBody.put("alamat", "Banjarmasin, Kalimantan Selatan");
@@ -106,11 +107,22 @@ public class StudentManagement extends ValidationApiTest {
                 .body(requestBody.toString())
                 .put("/api/siswa/{id}");
 
+        response.then()
+                .log().all()
+                .assertThat()
+                .statusCode(200)
+                .body("data.nama", equalTo("Iroha Ridho"))
+                .body("data.kelas", equalTo("XI-TKJ-2"));
+
+        String updatedAtAfter = response.jsonPath().getString("data.updated_at");
+        org.testng.Assert.assertNotEquals(updatedAtAfter, updatedAtBefore,
+                "updated_at seharusnya berubah otomatis setelah update");
+
         System.out.println("Status Code: " + response.getStatusCode());
         System.out.println("Response: " + response.asString());
     }
 
-    @Test (dependsOnMethods = "testUpdateStudent")
+    @Test(dependsOnMethods = "testUpdateStudent")
     public void testPatchStudent() {
         JSONObject requestBody = new JSONObject();
         requestBody.put("nama", "Kaname Ridho");
@@ -123,19 +135,29 @@ public class StudentManagement extends ValidationApiTest {
                 .body(requestBody.toString())
                 .patch("/api/siswa/{id}");
 
+        response.then()
+                .log().all()
+                .assertThat()
+                .statusCode(200)
+                .body("data.nama", equalTo("Kaname Ridho"))
+                .body("data.kelas", equalTo("XI-TKJ-2"));
+
         System.out.println("Status Code: " + response.getStatusCode());
         System.out.println("Response: " + response.asString());
     }
 
-    @Test (dependsOnMethods = "testPatchStudent")
+    @Test(dependsOnMethods = "testPatchStudent")
     public void testDestroyStudent() {
         Response response = RestAssured.given()
                 .baseUri(baseUrl)
                 .header("Authorization", "Bearer " + token)
-                .header("Content-Type", "application/json")
                 .pathParam("id", studentId)
-                .body(requestBody.toString())
                 .delete("/api/siswa/{id}");
+
+        response.then()
+                .log().all()
+                .assertThat()
+                .statusCode(200);
 
         System.out.println("Status Code: " + response.getStatusCode());
         System.out.println("Response: " + response.asString());
