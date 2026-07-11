@@ -81,7 +81,7 @@ public class StudentManagement extends ValidationApiTest {
         System.out.println("Nama student " + namaStudent + " Berhasil di regist!");
     }
 
-    @Test (dependsOnMethods = "testLogin")
+    @Test (dependsOnMethods = "createStudent")
     public void testUpdateStudent() {
         RestAssured.given()
                 .header("Authorization", "Bearer " + token)
@@ -110,7 +110,7 @@ public class StudentManagement extends ValidationApiTest {
         System.out.println("Response: " + response.asString());
     }
 
-    @Test (dependsOnMethods = "testLogin")
+    @Test (dependsOnMethods = "testUpdateStudent")
     public void testPatchStudent() {
         JSONObject requestBody = new JSONObject();
         requestBody.put("nama", "Kaname Ridho");
@@ -127,7 +127,7 @@ public class StudentManagement extends ValidationApiTest {
         System.out.println("Response: " + response.asString());
     }
 
-    @Test (dependsOnMethods = "testLogin")
+    @Test (dependsOnMethods = "testPatchStudent")
     public void testDestroyStudent() {
         Response response = RestAssured.given()
                 .baseUri(baseUrl)
