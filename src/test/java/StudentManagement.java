@@ -85,7 +85,7 @@ public class StudentManagement extends ValidationApiTest {
     @Test(dependsOnMethods = "createStudent")
     public void testUpdateStudent() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("nama", "Jane Smith");
+        requestBody.put("nama", "Iroha Ridho");
         requestBody.put("kelas", "XI-TKJ-2");
         requestBody.put("alamat", "Banjarmasin, Kalimantan Selatan");
 
