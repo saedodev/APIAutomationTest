@@ -50,7 +50,7 @@ public class StudentManagement extends ValidationApiTest {
                 .body("data.updated_at", notNullValue());
 
         studentId = response.jsonPath().getString("data.id");
-        System.out.println("Nama student " + namaStudent + " berhasil di-create! ID: " + studentId);
+        System.out.println("Nama student " + namaStudent + " berhasil di-create!");
     }
 
     @Test(dependsOnMethods = "testLogin")

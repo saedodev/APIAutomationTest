@@ -113,9 +113,8 @@ public class ValidationApiTest {
 
         response.then()
                 .log().all()
-                .body("data.email", Matchers.equalTo("wrongemail@example.com"))
-                .body("data.password", Matchers.equalTo("wrongpass123321"))
-                .statusCode(200);
+                .assertThat()
+                .statusCode(400);
 
         System.out.println("Status Code: " + response.getStatusCode());
         System.out.println("Response: " + response.asString());

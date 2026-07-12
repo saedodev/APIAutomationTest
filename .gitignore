@@ -3,4 +3,5 @@
 .idea/
 allure-results/
 build/
+gradle/
 dist/
