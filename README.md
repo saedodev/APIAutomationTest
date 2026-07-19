@@ -30,6 +30,7 @@ Framework ini digunakan untuk melakukan pengujian API seperti:
 - GET Request
 - POST Request
 - PUT Request
+- PATCH Request
 - DELETE Request
 
 Setiap pengujian akan melakukan validasi terhadap:
@@ -78,8 +79,8 @@ build/reports/tests/test/index.html
 
 Project ini menggunakan **GitHub Actions** untuk menjalankan automation test secara otomatis ketika terdapat:
 
-- Push ke branch `main`
-- Pull Request ke branch `main`
+- Push ke branch `master`
+- Pull Request ke branch `master`
 
 ## Author
 
