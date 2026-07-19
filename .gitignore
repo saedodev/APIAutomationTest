@@ -1,7 +1,0 @@
-# Ignore an entire folder (always end with a slash)
-.gradle/
-.idea/
-allure-results/
-build/
-gradle/
-dist/
