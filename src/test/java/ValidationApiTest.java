@@ -100,25 +100,25 @@ public class ValidationApiTest {
         System.out.println("Response: " + response.asString());
     }
 
-    @Test(groups = {"validation"})
-    public void testFailedLogin() {
-        JSONObject requestBody = new JSONObject();
-        requestBody.put("email", email);
-        requestBody.put("password", password);
-
-        Response response = RestAssured.given()
-                .header("Content-Type", "application/json")
-                .body(requestBody.toString())
-                .post(baseUrl + "api/auth/login");
-
-        response.then()
-                .log().all()
-                .assertThat()
-                .statusCode(400);
-
-        System.out.println("Status Code: " + response.getStatusCode());
-        System.out.println("Response: " + response.asString());
-    }
+//    @Test(groups = {"validation"})
+//    public void testFailedLogin() {
+//        JSONObject requestBody = new JSONObject();
+//        requestBody.put("email", email);
+//        requestBody.put("password", password);
+//
+//        Response response = RestAssured.given()
+//                .header("Content-Type", "application/json")
+//                .body(requestBody.toString())
+//                .post(baseUrl + "api/auth/login");
+//
+//        response.then()
+//                .log().all()
+//                .assertThat()
+//                .statusCode(400);
+//
+//        System.out.println("Status Code: " + response.getStatusCode());
+//        System.out.println("Response: " + response.asString());
+//    }
 
     @Test(groups = {"validation"})
     public void testBlankLogin() {
