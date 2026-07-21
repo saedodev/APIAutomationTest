@@ -18,9 +18,8 @@ src
 │   └── java
 └── test
     └── java
-        ├── tests
-        ├── utils
-        └── base
+    └── resources
+        └── jsonschema
 ```
 
 ## Test Scenarios
