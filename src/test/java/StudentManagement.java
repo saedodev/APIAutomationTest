@@ -57,6 +57,8 @@ public class StudentManagement extends ValidationApiTest {
     public void getAllStudent() {
         Response response = RestAssured.given()
                 .header("Authorization", "Bearer " + token)
+                .queryParam("page", 3)
+                .queryParam("limit", 15)
                 .when()
                 .get(baseUrl + "api/siswa");
 
